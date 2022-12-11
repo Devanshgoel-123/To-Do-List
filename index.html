@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>To do List </title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/1fc642c78d.js" crossorigin="anonymous"></script>
+
+  </head>
+  <body>
+    <h1>TO DO LIST</h1>
+    <div class="Todolist">
+      <div class="top-container">
+        <input id="textbox" type="text" name="" value="Enter a task">
+        <button class="button" onclick="addTask()" type="button" name="button"><i class="fa-sharp fa-solid fa-plus"></i></button>
+      </div>
+
+
+     <table>
+      <tr>
+        <td>
+         <input type="checkbox" name="" value="">
+       </td>
+       <td class="task-field">
+         <p id="taskfirst"> task 1 </p>
+       </td>
+
+      </tr>
+      <tr>
+        <td>
+         <input type="checkbox" name="" value="">
+       </td>
+       <td class="task-field">
+         <p id="tasksecond"> task 2</p>
+       </td>
+
+      </tr>
+      <tr>
+        <td>
+         <input type="checkbox" name="" value="">
+       </td>
+       <td class="task-field">
+         <p id="taskthird"> task 2</p>
+       </td>
+
+      </tr>
+      <tr>
+        <td>
+         <input type="checkbox" name="" value="">
+       </td>
+       <td class="task-field">
+         <p id="taskfourth"> task 4 </p>
+       </td>
+
+      </tr>
+
+
+     </table>
+    </div>
+
+
+
+   <script type="text/javascript">
+      var tasks=[];
+      function addTask(){
+       var task=document.querySelector("#textbox").value;
+       var tasktobeadded=task;
+       tasks.push(tasktobeadded);
+
+       document.querySelector("#taskfirst").innerHTML=tasks[0];
+       document.querySelector("#tasksecond").innerHTML=tasks[1];
+       document.querySelector("#taskthird").innerHTML=tasks[2];
+       document.querySelector("#taskfourth").innerHTML=tasks[2];
+     }
+
+
+   </script>
+
+  </body>
+</html>
